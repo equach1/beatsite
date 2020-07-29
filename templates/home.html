@@ -3,11 +3,18 @@
 
 {% block content %}
 
-   	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/main-banner.jpg' %}')">
-		<div class="heading">
-			<h1>&ltJacob.Waldrip&gt</h1>
-			<p>"Don't expect to be motivated every day to make things happen.<br>You won't be. Don’t count on motivation. Count on discipline."</p>
-			<h3 class="cd-headline clip is-full-width">
+<!-- style="background: url('{% static 'uploads/background.mp4' %}')" -->
+
+   	<section id="home" class="main-banner parallaxie">
+		<div id="video-containter">
+			<video autoplay muted loop>
+				<source src="{% static 'uploads/background.mp4' %}" type="video/mp4">
+			</video>
+		</div>
+		<div class="heading" class="content">
+			<h1>Prod. By J.A</h1>
+			<!-- <p>"Don't expect to be motivated every day to make things happen.<br>You won't be. Don’t count on motivation. Count on discipline."</p> -->
+			<!-- <h3 class="cd-headline clip is-full-width">
 				<span>I AM A </span>
 				<span class="cd-words-wrapper">
 					<b class="is-visible">Web Developer</b>
@@ -22,12 +29,12 @@
 					<b>Backend Developer</b>
 					<b>Full Stack Developer</b>
 				</span>
-			</h3>
+			</h3> -->
 		</div>
 	</section>
 
 	<!-- Pretty clouds between landing page and home banner -->
-	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+	<!-- <svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
         <path d="M-5 100 Q 0 20 5 100 Z
             M0 100 Q 5 0 10 100
             M5 100 Q 10 30 15 100
@@ -50,7 +57,7 @@
             M90 100 Q 95 25 100 100
             M95 100 Q 100 15 105 100 Z">
         </path>
-    </svg>
+    </svg> -->
 
 	<!-- Landing Page Section -->
 	<div id="landingpage" class="section lb">
@@ -368,77 +375,95 @@
     </div><!-- end section -->
 	
 	<!-- Personal OC section -->
-	<div id="personalcontent" class="section lb">
-		<div class="container">
-			<div class="section-title text-left">
-                <h3>Personal Content</h3>
-                <p>Keep up with any tutorials, articles, or projects I've created.</p>
-            </div><!-- end title -->
+	<div id="personalcontent" class="section lb" style="background: url('{% static 'uploads/main-banner.jpg' %}')">
 			
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<div class="post-box">
-						<a href="/home/screeps">
-							<div class="post-thumb">
-								<img src="{% static 'uploads/screepsss.png' %}" class="img-fluid" alt="post-img" />
-								<div class="date">
-									<span>Active</span>
-								</div>
-							</div>
-						</a>
-						<div class="post-info">
-							<h4>Screeps Typescript AI</h4>
-							<ul>
-                                <li>by Jacob Waldrip, Brock Sharp</li>
-								<li>| <a href="https://github.com/jakesboy2/screeps-typescript-starter" target="_blank"><b>Github Repo</b></a></li>
-								<li>| Dec 29, 2018 |</li>
-                            </ul>
-							<p>&nbsp&nbspAn AI for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, a game where you are provided an API and write a script to run every few seconds to interact with the game.</p>
-						</div>
+		<br><br><br><br><br>
+
+		<div class="audio-container justify-content-center">
+
+			<audio id="audio" preload="auto">
+				<source src="{% static 'uploads/ghostride.wav' %}" type="audio/wav" id="ghost" data-track-number="1">
+				<source src="{% static 'uploads/page-9.wav' %}" type="audio/wav" id="page" data-track-number="2">
+				<source src="{% static 'uploads/thistimearoundfinal.wav' %}" type="audio/wav" id="thistime" data-track-number="3">
+				Your browser does not support HTML5 audio.
+			</audio>
+			
+			<div class="player">
+			
+				<div class="large-toggle-btn">
+				<i class="large-play-btn"><span class="screen-reader-text">Large toggle button</span></i>
+				</div>
+				<!-- /.play-box -->
+			
+				<div class="info-box">
+				<div class="track-info-box">
+					<div class="track-title-text"></div>
+					<div class="audio-time">
+					<span class="current-time">00:00</span> /
+					<span class="duration">00:00</span>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<div class="post-box">
-						<div class="post-thumb">
-							<img src="{% static 'uploads/tutss.png' %}" class="img-fluid" alt="post-img" />
-							<div class="date">
-								<span>On Hold</span>
-							</div>
-						</div>
-						<div class="post-info">
-							<h4>Javascript Standard Lib</h4>
-							<ul>
-								<li>by Jacob Waldrip</li>
-								<br>
-								<li>|<a href="https://github.com/jakesboy2/JS-Standard-Lib" target="_blank"><b> Github Repo</b></a></li>
-								<li>| Jun 27, 2019 |</li>
-                            </ul>
-							<p>&nbsp&nbspA simple "standard library" for Javascript and Typescript. I created this to reduce needing to include bulky libraries for helper functions.</p>
-						</div>
+				<!-- /.info-box -->
+			
+				<div class="progress-box">
+					<div class="progress-cell">
+					<div class="progress">
+						<div class="progress-buffer"></div>
+						<div class="progress-indicator"></div>
+					</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<div class="post-box">
-						<div class="post-thumb">
-							<img src="{% static 'uploads/codess.png' %}" class="img-fluid" alt="post-img" />
-							<div class="date">
-								<span>Active</span>
-							</div>
-						</div>
-						<div class="post-info">
-							<h4>Screeps Tutorial Series</h4>
-							<ul>
-								<li>by Jacob Waldrip</li>
-								<br>
-                                <li>|<a href="https://www.youtube.com/playlist?list=PLwQgSGt0gSyRH6172-QQXj_u6FDEglJHI" target="_blank"><b> Playlist Link</b></a></li>
-								<li>| Mar 27, 2019 |</li>
-                            </ul>
-							<p>&nbsp&nbspA tutorial for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, meant to help players who are new to programming get started in building their AI.</p>
-						</div>
-					</div>
+			
 				</div>
+				<!-- /.progress-box -->
+			
+				<div class="controls-box">
+				<i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
+				<i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
+				</div>
+				<!-- /.controls-box -->
+			
 			</div>
+			<!-- /.player -->
 			
+			<div class="play-list">
+			
+				<div class="play-list-row" data-track-row="1">
+					<div class="small-toggle-btn">
+						<i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+					</div>
+					<div class="track-number">
+						1.
+					</div>
+					<div class="track-title">
+						<a class="playlist-track" href="#" data-play-track="1">Ghostride</a>
+					</div>
+				</div>
+				<div class="play-list-row" data-track-row="2">
+					<div class="small-toggle-btn">
+						<i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+					</div>
+					<div class="track-number">
+						2.
+					</div>
+					<div class="track-title">
+						<a class="playlist-track" href="#" data-play-track="2">Page-9</a>
+					</div>
+				</div>
+				<div class="play-list-row" data-track-row="3">
+					<div class="small-toggle-btn">
+						<i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+					</div>
+					<div class="track-number">
+						3.
+					</div>
+					<div class="track-title">
+						<a class="playlist-track" href="#" data-play-track="3">This Time Around</a>
+					</div>
+				</div>			
+			</div>
 		</div>
+		<br><br>
 	</div>
+</div>
 {% endblock %}
