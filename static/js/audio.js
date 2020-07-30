@@ -2,7 +2,7 @@ var audioPlayer = function() {
   "use strict";
 
   // Private variables
-  var _currentTrack = null;
+  var _currentTrack = 1;
   var _elements = {
     audio: document.getElementById("audio"),
     playerButtons: {

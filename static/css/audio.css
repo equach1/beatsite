@@ -101,11 +101,12 @@ body .audio-container .player .info-box .track-info-box {
   float: left;
   font-size: 12px;
   margin: 0 0 6px 0;
-  visibility: hidden;
+  visibility: visible;
   width: 400px;
   *zoom: 1;
 }
 body .audio-container .player .info-box .track-info-box .track-title-text {
+  visibility: visible;
   font-weight: bolder;
   color: #ffffff;
   display: inline-block;
@@ -126,7 +127,7 @@ body .audio-container .player .info-box .track-info-box:after {
   display: block;
   font-size: 0;
   height: 0;
-  visibility: hidden;
+  visibility: visible;
 }
 body .audio-container .player .progress-box {
   float: left;
